@@ -1,3 +1,5 @@
+$buttonColor: rgb(0, 174, 255);
+$buttonShadow: #073f7a;
 body {
   display: flex;
 flex-flow: column;
@@ -7,7 +9,7 @@ min-height: 100vh;
   flex: 1;
 }
 .header {
-  background-color: rgb(0, 174, 255);
+  background-color: $buttonColor;
   color: white;
   text-align: center;
   padding: 20px;
@@ -15,16 +17,17 @@ min-height: 100vh;
   margin-bottom: 40px;
 }
 
-#answerBt {
-  margin-bottom: 50px;
-  box-shadow: 0px 5px 2px 0px #073f7a;
-  
-  &:active {
-    box-shadow: none;
-    position: relative;
-    top: 5px;
+
+  .btn-primary {
+    margin-bottom: 50px;
+    box-shadow: 0px 5px 2px 0px $buttonShadow;
+    &:active {
+      box-shadow: none;
+      position: relative;
+      top: 5px;
+    }
   }
-}
+
 #js-question {
   padding:100px;
   font-size: 20px;
@@ -35,4 +38,32 @@ min-height: 100vh;
   padding: 20px;
   background-color: gray;
   border-top: 1px solid black;
+}
+
+.rmBt {
+  visibility: hidden;
+}
+
+.hideRs {
+  text-align: center;
+  & a{
+    background-color: $buttonColor;
+    padding: 20px 60px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 2px 0px $buttonShadow;
+    &:hover {
+      text-decoration: none;
+      background-color: #0069d9;
+      cursor: pointer;
+      color:white;
+      transition: all 0.5s ease 0s;
+      
+    }
+    &:active {
+      position: relative;
+      top: 5px;
+      box-shadow: none;
+    }
+  }
 }

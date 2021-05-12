@@ -37,6 +37,11 @@ const $button = document.getElementsByTagName('button');
 const buttonLength = $button.length;
 const $result = document.getElementById('js-result');
 
+const $rmButton = document.getElementsByClassName('btn-primary');
+
+const $rmRestart = document.getElementById('Restart');
+
+console.log($rmButton)
 const setupQuiz = () => {
   document.getElementById('js-question').textContent = quiz[quizIndex].question;
   let buttonIndex = 0; 
@@ -57,11 +62,14 @@ const clickHandler = (e) => {
     window.alert('不正解！');
   }
   quizIndex++;
-
+  
   if(quizIndex < quizLength){
     setupQuiz();
   } else {
-    // location.href = "result.html";
+    for(let i = 0; i < $rmButton.length;i++){
+      $rmButton[i].classList.add("rmBt");
+    }
+    $rmRestart.classList.remove('rmBt');
     greet.innerHTML = `あなたの点数は${score}です`
     
   }

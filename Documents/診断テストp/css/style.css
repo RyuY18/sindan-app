@@ -24,13 +24,13 @@ body {
   margin-bottom: 40px;
 }
 
-#answerBt {
+.btn-primary {
   margin-bottom: 50px;
   -webkit-box-shadow: 0px 5px 2px 0px #073f7a;
           box-shadow: 0px 5px 2px 0px #073f7a;
 }
 
-#answerBt:active {
+.btn-primary:active {
   -webkit-box-shadow: none;
           box-shadow: none;
   position: relative;
@@ -47,5 +47,38 @@ body {
   padding: 20px;
   background-color: gray;
   border-top: 1px solid black;
+}
+
+.rmBt {
+  visibility: hidden;
+}
+
+.hideRs {
+  text-align: center;
+}
+
+.hideRs a {
+  background-color: #00aeff;
+  padding: 20px 60px;
+  color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 2px 0px #073f7a;
+          box-shadow: 0px 5px 2px 0px #073f7a;
+}
+
+.hideRs a:hover {
+  text-decoration: none;
+  background-color: #0069d9;
+  cursor: pointer;
+  color: white;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.hideRs a:active {
+  position: relative;
+  top: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 /*# sourceMappingURL=style.css.map */
