@@ -41,7 +41,21 @@ const $rmButton = document.getElementsByClassName('btn-primary');
 
 const $rmRestart = document.getElementById('Restart');
 
-console.log($rmButton)
+const $twButton = document.getElementById('twBt');
+
+const shareLog = `あなたの点数は${score}点です！すごい！！`
+const result = () => {
+  if(score === quizLength) {
+    $twButton.setAttribute('href',"https://twitter.com/intent/tweet?" + [
+"text=" + encodeURIComponent(shareLog),
+"url=" + encodeURIComponent('https://www.youtube.com/watch?v=tU6ToAYvz1g'),
+"hashtags=" + encodeURIComponent('#UNK')
+].join("&"));
+  }else{
+    console.log('unk');
+  }
+}
+
 const setupQuiz = () => {
   document.getElementById('js-question').textContent = quiz[quizIndex].question;
   let buttonIndex = 0; 
@@ -71,19 +85,19 @@ const clickHandler = (e) => {
     }
     $rmRestart.classList.remove('rmBt');
     greet.innerHTML = `あなたの点数は${score}です`
-    
+    result();
   }
 };
-  
-  let handlerIndex = 0;
-  while(handlerIndex < buttonLength) {
-    $button[handlerIndex].addEventListener('click', (e) => {
-      clickHandler(e);
-    });
-    handlerIndex++;
-  };
 
-  
+let handlerIndex = 0;
+while(handlerIndex < buttonLength) {
+  $button[handlerIndex].addEventListener('click', (e) => {
+    clickHandler(e);
+  });
+  handlerIndex++;
+};
+
+
 // $button[0].addEventListener('click', (e) => {
 //   clickHandler();
 // $button[1].addEventListener('click', (e) => {
