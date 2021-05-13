@@ -29,6 +29,7 @@ const quiz = [
     correct:'セシル'
   }
 ];
+
 const greet = document.getElementById('js-question');
 const quizLength = quiz.length;
 let quizIndex = 0;
@@ -43,69 +44,91 @@ const $rmRestart = document.getElementById('Restart');
 
 const $twButton = document.getElementById('twBt');
 
-const shareLog = `あなたの点数は${score}点です！すごい！！`
+const shareUrl = "https://github.com/RyuY18/sindan-app/tree/master/Documents/%E8%A8%BA%E6%96%AD%E3%83%86"
 const result = () => {
-  if(score === quizLength) {
+  if(score === 3) {
     $twButton.setAttribute('href',"https://twitter.com/intent/tweet?" + [
-"text=" + encodeURIComponent(shareLog),
-"url=" + encodeURIComponent('https://www.youtube.com/watch?v=tU6ToAYvz1g'),
-"hashtags=" + encodeURIComponent('#UNK')
-].join("&"));
-  }else{
-    console.log('unk');
-  }
-}
-
-const setupQuiz = () => {
-  document.getElementById('js-question').textContent = quiz[quizIndex].question;
-  let buttonIndex = 0; 
-  let buttonLength = $button.length;
-  while(buttonIndex < buttonLength) {
-    $button[buttonIndex].textContent = quiz[quizIndex].answer[buttonIndex];
-    buttonIndex++;
+      "text=" + encodeURIComponent(shareLog[score]),
+      "url=" + encodeURIComponent(shareUrl),
+      "hashtags=" + encodeURIComponent('#診断テスト')
+    ].join("&"));
+  } else if(score === 2) {
+    $twButton.setAttribute('href',"https://twitter.com/intent/tweet?" + [
+      "text=" + encodeURIComponent(shareLog[score]),
+      "url=" + encodeURIComponent(shareUrl),
+      "hashtags=" + encodeURIComponent('#診断テスト')
+    ].join("&")); 
+  } else if(score === 1) {
+    $twButton.setAttribute('href',"https://twitter.com/intent/tweet?" + [
+      "text=" + encodeURIComponent(shareLog[score]),
+      "url=" + encodeURIComponent(shareUrl),
+      "hashtags=" + encodeURIComponent('#診断テスト')
+    ].join("&")); 
+  } else if(score === 0) {
+    $twButton.setAttribute('href',"https://twitter.com/intent/tweet?" + [
+      "text=" + encodeURIComponent(shareLog[score]),
+      "url=" + encodeURIComponent(shareUrl),
+      "hashtags=" + encodeURIComponent('#診断テスト')
+    ].join("&")); }
   }
   
-}
-setupQuiz();
-
-const clickHandler = (e) => {
-  if(quiz[quizIndex].correct === e.target.textContent){
-    window.alert('正解！');
-    score++;
-  } else{
-    window.alert('不正解！');
-  }
-  quizIndex++;
-  
-  if(quizIndex < quizLength){
-    setupQuiz();
-  } else {
-    for(let i = 0; i < $rmButton.length;i++){
-      $rmButton[i].classList.add("rmBt");
+  const setupQuiz = () => {
+    document.getElementById('js-question').textContent = quiz[quizIndex].question;
+    let buttonIndex = 0; 
+    let buttonLength = $button.length;
+    while(buttonIndex < buttonLength) {
+      $button[buttonIndex].textContent = quiz[quizIndex].answer[buttonIndex];
+      buttonIndex++;
     }
-    $rmRestart.classList.remove('rmBt');
-    greet.innerHTML = `あなたの点数は${score}です`
-    result();
+    
   }
-};
-
-let handlerIndex = 0;
-while(handlerIndex < buttonLength) {
-  $button[handlerIndex].addEventListener('click', (e) => {
-    clickHandler(e);
-  });
-  handlerIndex++;
-};
-
-
-// $button[0].addEventListener('click', (e) => {
-//   clickHandler();
-// $button[1].addEventListener('click', (e) => {
-//   clickHandler();
-// });
-// $button[2].addEventListener('click', (e) => {
-//   clickHandler();
-// });
-// $button[3].addEventListener('click', (e) => {
-//   clickHandler();
-// });
+  setupQuiz();
+  
+  const clickHandler = (e) => {
+    if(quiz[quizIndex].correct === e.target.textContent){
+      window.alert('正解！');
+      score++;
+    } else{
+      window.alert('不正解！');
+    }
+    quizIndex++;
+    
+    if(quizIndex < quizLength){
+      setupQuiz();
+    } else {
+      for(let i = 0; i < $rmButton.length;i++){
+        $rmButton[i].classList.add("rmBt");
+      }
+      $rmRestart.classList.remove('rmBt');
+      greet.innerHTML = `あなたの点数は${score}です`
+      result();
+    }
+  };
+  
+  let handlerIndex = 0;
+  while(handlerIndex < buttonLength) {
+    $button[handlerIndex].addEventListener('click', (e) => {
+      clickHandler(e);
+    });
+    handlerIndex++;
+  };
+  const shareLog = [
+    `あなたの点数は0点です！人間以下ですね`,
+    `あなたの点数は1点です！まあまあですね`,
+    `あなたの点数は2点です！普通ですね`,
+    `あなたの点数は3点です！すごい！！`
+  ];
+  
+  
+  // $button[0].addEventListener('click', (e) => {
+    //   clickHandler();
+    // $button[1].addEventListener('click', (e) => {
+      //   clickHandler();
+      // });
+      // $button[2].addEventListener('click', (e) => {
+        //   clickHandler();
+        // });
+        // $button[3].addEventListener('click', (e) => {
+          //   clickHandler();
+          // });
+          
