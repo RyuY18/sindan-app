@@ -56,25 +56,25 @@ const result = () => {
     $twButton.setAttribute('href',"https://twitter.com/intent/tweet?" + [
       "text=" + encodeURIComponent(shareLog[score]),
       "url=" + encodeURIComponent(shareUrl),
-      "hashtags=" + encodeURIComponent('#診断テスト')
+      "hashtags=" + encodeURIComponent('診断テスト')
     ].join("&"));
   } else if(score === 2) {
     $twButton.setAttribute('href',"https://twitter.com/intent/tweet?" + [
       "text=" + encodeURIComponent(shareLog[score]),
       "url=" + encodeURIComponent(shareUrl),
-      "hashtags=" + encodeURIComponent('#診断テスト')
+      "hashtags=" + encodeURIComponent('診断テスト')
     ].join("&")); 
   } else if(score === 1) {
     $twButton.setAttribute('href',"https://twitter.com/intent/tweet?" + [
       "text=" + encodeURIComponent(shareLog[score]),
       "url=" + encodeURIComponent(shareUrl),
-      "hashtags=" + encodeURIComponent('#診断テスト')
+      "hashtags=" + encodeURIComponent('診断テスト')
     ].join("&")); 
   } else if(score === 0) {
     $twButton.setAttribute('href',"https://twitter.com/intent/tweet?" + [
       "text=" + encodeURIComponent(shareLog[score]),
       "url=" + encodeURIComponent(shareUrl),
-      "hashtags=" + encodeURIComponent('#診断テスト')
+      "hashtags=" + encodeURIComponent('診断テスト')
     ].join("&")); }
   }
   
@@ -107,6 +107,7 @@ const result = () => {
       }
       $rmRestart.classList.remove('rmBt');
       greet.innerHTML = `あなたの点数は${score}です`
+      $twButton.classList.remove("rmBt");
       result();
     }
   };
