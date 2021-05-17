@@ -1,3 +1,8 @@
+h2 {
+  font-size: 20px;
+  border-bottom: 2px solid black;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,13 +30,31 @@ body {
 }
 
 .container #list #sindan {
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 100px 75px;
+  display: inline-block;
+}
+
+.container #list #sindan:hover {
+  -webkit-box-shadow: 0px 0px 8px 1px black;
+          box-shadow: 0px 0px 8px 1px black;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  margin-top: 2px;
 }
 
 .container #list #sindan2 {
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 100px 75px;
+  display: inline-block;
+}
+
+.container #list #sindan2:hover {
+  -webkit-box-shadow: 0px 0px 8px 1px black;
+          box-shadow: 0px 0px 8px 1px black;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  margin-top: 2px;
 }
 
 .header {
