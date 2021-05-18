@@ -2,7 +2,7 @@
   "name": "sindnapp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "appNd.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "npm run-script build: node appNd.js"
