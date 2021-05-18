@@ -62,7 +62,7 @@ body {
   color: white;
   text-align: center;
   padding: 20px;
-  font-family: 'Kosugi Maru', sans-serif;
+  font-family: "Kosugi Maru", sans-serif;
   margin-bottom: 40px;
 }
 
@@ -149,5 +149,34 @@ body {
           box-shadow: none;
   position: relative;
   top: 5px;
+}
+
+.startBt {
+  display: block;
+  width: 50%;
+  background-color: #00aeff;
+  padding: 20px 60px;
+  color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 2px 0px #073f7a;
+          box-shadow: 0px 5px 2px 0px #073f7a;
+  margin: 150px auto;
+  text-align: center;
+}
+
+.startBt:hover {
+  text-decoration: none;
+  background-color: #0069d9;
+  cursor: pointer;
+  color: white;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.startBt:active {
+  position: relative;
+  top: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 /*# sourceMappingURL=style.css.map */
