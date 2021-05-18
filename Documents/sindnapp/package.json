@@ -5,7 +5,6 @@
   "main": "appNd.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "npm run-script build: node appNd.js"
   },
   "author": "",
   "license": "ISC",
