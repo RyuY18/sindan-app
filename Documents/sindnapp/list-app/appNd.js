@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const http = require('http');
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 app.use(express.static("js"));
@@ -18,6 +19,9 @@ app.get("/start", (req, res) => {
 });
 
 // サーバーを起動するコードを貼り付けてください
-app.listen(3000);
+
+app.listen(PORT, function() {
+  console.log('start saver!');
+});
 
 localhost: 3000;
