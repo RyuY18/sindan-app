@@ -1,0 +1,182 @@
+h2 {
+  font-size: 20px;
+  border-bottom: 2px solid black;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  min-height: 100vh;
+}
+
+.container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.container #list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container #list #sindan {
+  border: 1px solid black;
+  padding: 100px 75px;
+  display: inline-block;
+}
+
+.container #list #sindan:hover {
+  -webkit-box-shadow: 0px 0px 8px 1px black;
+          box-shadow: 0px 0px 8px 1px black;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  margin-top: 2px;
+}
+
+.container #list #sindan2 {
+  border: 1px solid black;
+  padding: 100px 75px;
+  display: inline-block;
+}
+
+.container #list #sindan2:hover {
+  -webkit-box-shadow: 0px 0px 8px 1px black;
+          box-shadow: 0px 0px 8px 1px black;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  margin-top: 2px;
+}
+
+.header {
+  background-color: #00aeff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: "Kosugi Maru", sans-serif;
+  margin-bottom: 40px;
+}
+
+.btn-primary {
+  margin-bottom: 50px;
+  -webkit-box-shadow: 0px 5px 2px 0px #073f7a;
+          box-shadow: 0px 5px 2px 0px #073f7a;
+}
+
+.btn-primary:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  position: relative;
+  top: 5px;
+}
+
+#js-question {
+  padding: 100px;
+  font-size: 20px;
+  margin: 80px;
+}
+
+.info {
+  padding: 20px;
+  background-color: gray;
+  border-top: 1px solid black;
+}
+
+.rmBt {
+  visibility: hidden;
+  display: none;
+}
+
+.hideRs {
+  text-align: center;
+}
+
+.hideRs a {
+  background-color: #00aeff;
+  padding: 20px 60px;
+  color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 2px 0px #073f7a;
+          box-shadow: 0px 5px 2px 0px #073f7a;
+}
+
+.hideRs a:hover {
+  text-decoration: none;
+  background-color: #0069d9;
+  cursor: pointer;
+  color: white;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.hideRs a:active {
+  position: relative;
+  top: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#twBt {
+  background-color: #00b7ff;
+  margin: auto;
+  margin-bottom: 150px;
+  padding: 20px 60px;
+  color: white;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 5px 2px 0px #073f7a;
+          box-shadow: 0px 5px 2px 0px #073f7a;
+}
+
+#twBt:hover {
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+  background-color: #0270ca;
+}
+
+#twBt:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  position: relative;
+  top: 5px;
+}
+
+.startBt {
+  display: block;
+  width: 50%;
+  background-color: #00aeff;
+  padding: 20px 60px;
+  color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 2px 0px #073f7a;
+          box-shadow: 0px 5px 2px 0px #073f7a;
+  margin: 150px auto;
+  text-align: center;
+}
+
+.startBt:hover {
+  text-decoration: none;
+  background-color: #0069d9;
+  cursor: pointer;
+  color: white;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.startBt:active {
+  position: relative;
+  top: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+/*# sourceMappingURL=style.css.map */
